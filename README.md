@@ -1,7 +1,9 @@
+# Belajar Jenkins Pipeline
 
-# Belajar-jenkins-Pipeline
+Belajar integrasi Jenkins dengan GitHub menggunakan Jenkins Pipeline.
 
-# Belajar Spring Dasar
+## Belajar Spring Dasar
+Referensi materi dari Programmer Zaman Now.
 
-by Programmer Zaman Now
- 1b6be2a (Create README.md)
+## Trigger Jenkins
+Repository ini digunakan untuk uji trigger Jenkins (Webhook / Poll SCM).
