@@ -3,12 +3,14 @@ pipeline {
     node {
       label "linux && java21"  
     }
+  }
  }
     stages {
         stage("Build") {
             steps {
                 echo("Hello Build") 
             }
+        }
         }
        stages {
         stage("Test") {
