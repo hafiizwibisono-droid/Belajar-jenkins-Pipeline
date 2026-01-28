@@ -1,31 +1,32 @@
-pipeline {
-  agent {
-    node {
-      label "linux && java21"  
+
+        
+    pipeline {
+    agent {
+        node {
+            label "linux && java21"
+        }
     }
-  }
- }
+
     stages {
         stage("Build") {
             steps {
-                echo("Hello Build") 
+                echo "Hello Build"
             }
         }
-        }
-       stages {
+
         stage("Test") {
             steps {
-                echo("Hello Test") 
+                echo "Hello Test"
             }
         }
-        }
-        stages {
+
         stage("Deploy") {
             steps {
-                echo("Hello Deploy") 
+                echo "Hello Deploy"
             }
-        } 
+        }
     }
+
     post {
         always {
             echo "I will always say Hello again!"
@@ -34,12 +35,11 @@ pipeline {
             echo "Yay, success"
         }
         failure {
-            echo "Oh no, failure "
+            echo "Oh no, failure"
         }
         cleanup {
             echo "Don't care success or error"
-          }
-         }
-        
-        
-    
+        }
+    }
+}
+
