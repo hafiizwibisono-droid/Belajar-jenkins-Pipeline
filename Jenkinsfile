@@ -18,6 +18,7 @@ pipeline {
                 echo("Hello Test") 
             }
         }
+        }
         stages {
         stage("Deploy") {
             steps {
@@ -39,6 +40,6 @@ pipeline {
             echo "Don't care success or error"
           }
          }
-        }
+        
         
     
