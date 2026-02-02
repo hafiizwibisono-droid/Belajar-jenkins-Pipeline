@@ -10,11 +10,9 @@
     stages {
         stage("Build") {
             steps {
-                echo "Hello Build 1"
-                sleep(5)
-                echo "Hello Build 2"
-                echo "Hello Build 3"
-                echo "Hello Build 4"
+                echo "Start Build"
+                sleep(10)
+                echo "Finish Build"
 
             }
         }
