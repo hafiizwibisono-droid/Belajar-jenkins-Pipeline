@@ -1,55 +1,41 @@
-
-        
-    pipeline {
+pipeline {
     agent {
         node {
-            label "linux && java21"
+            label "linux" 
         }
     }
+
+    tools {
+        jdk 'jdk21' 
 
     stages {
         stage("Build") {
             steps {
-                echo "Start Build"
-                sleep(5)
-               sh"./mvnw clean compile test-compile"
-                echo"Finish Build"
+                echo "Start Build with Java 21"
+                sh "java -version"
+                sh "./mvnw clean compile test-compile"
+                echo "Finish Build"
             }
         }
 
         stage("Build 2") {
             steps {
-                echo "Start Build"
-                sh"./mvnw test"
-                echo "Finish Build"
-
+                echo "Start Test"
+                sh "./mvnw test"
+                echo "Finish Test"
             }
         }
 
         stage("Deploy") {
             steps {
-                echo "Hello Deploy 1"
-                sleep(5)
-                echo "Hello Deploy 2"
-                echo "Hello Deploy 3"
-                echo "Hello Deploy 4"
+                echo "Hello Deploy"
             }
         }
     }
 
     post {
-        always {
-            echo "I will always say Hello again!"
-        }
-        success {
-            echo "Yay, success"
-        }
-        failure {
-            echo "Oh no, failure"
-        }
-        cleanup {
-            echo "Don't care success or error"
-        }
+        always { echo "I will always say Hello again!" }
+        success { echo "Yay, success" }
+        failure { echo "Oh no, failure" }
     }
 }
-
