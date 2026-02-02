@@ -12,16 +12,16 @@
             steps {
                 echo "Start Build"
                 sleep(10)
-               sh("./mvnw clean compile test-compile")
+               sh"./mvnw clean compile test-compile"
                 echo"Finish Build"
             }
         }
 
-        stage("Test") {
+        stage("Build 2") {
             steps {
-                (echo "Start Test")
-                sh("./mvnw test")
-                echo "Finish Test"
+                echo "Start Build"
+                sh"./mvnw test"
+                echo "Finish Build"
 
             }
         }
