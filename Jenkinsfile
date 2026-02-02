@@ -38,4 +38,5 @@ pipeline {
         success { echo "Yay, success" }
         failure { echo "Oh no, failure" }
     }
+ }
 }
