@@ -3,7 +3,7 @@
     pipeline {
     agent {
         node {
-            label "linux && java17"
+            label "linux && java21"
         }
     }
 
