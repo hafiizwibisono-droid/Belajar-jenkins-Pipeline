@@ -6,7 +6,8 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.5</version>
-		<relativePath/> </parent>
+		<relativePath/>
+	</parent>
 	<groupId>programmer-zaman-now</groupId>
 	<artifactId>belajar-spring-dasar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -22,6 +23,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>9.6</version>
 		</dependency>
 
 		<dependency>
@@ -64,5 +71,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
